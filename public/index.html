@@ -8,6 +8,24 @@
     <title>test-fb</title>
   </head>
   <body>
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/zh_TW/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat"
+      attribution=setup_tool
+      page_id="420907664928745"
+      theme_color="#39C5BB"
+      logged_in_greeting="Hello! How can we help you?"
+      logged_out_greeting="Hello! How can we help you?">
+    </div>
     <noscript>
       <strong>We're sorry but test-fb doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
