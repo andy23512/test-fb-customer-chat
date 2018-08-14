@@ -1,8 +1,10 @@
 const webpack = require('webpack')
 
 module.exports = {
-  baseUrl: '/',
-  outputDir: 'dist',
+  baseUrl: process.env.NODE_ENV === 'production'
+    ? '/test-fb-customer-chat/'
+    : '/',
+  outputDir: 'docs',
   css: {
     loaderOptions: {
       sass: {
